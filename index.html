@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: #ff6347; /* Tomato */
+            border-radius: 2px;
+        }
+        .card {
+            background-color: #f7f9fc;
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1.5rem;
+            border-left: 5px solid;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-header {
+            font-weight: 700;
+            color: #1a237e; /* Indigo */
+            margin-bottom: 0.5rem;
+        }
+        .spiritual-card {
+            border-color: #4caf50; /* Green */
+        }
+        .education-card {
+            border-color: #2196f3; /* Blue */
+        }
+        .home-card {
+            border-color: #ff9800; /* Orange */
+        }
+        .business-card {
+            border-color: #9c27b0; /* Purple */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen p-4">
+    <div class="container">
+        <header class="text-center mb-10">
+            <h1 class="text-5xl font-extrabold text-blue-900 mb-2">Life Timeline</h1>
+            <p class="text-lg text-gray-600">A journey through My life.</p>
+            <p class="text-lg text-gray-600"> 2025, 2026, 2027, 2028</p>
+        </header>
+
+        <section class="section-container mb-12">
+            <h2 class="section-title text-4xl font-bold text-gray-800">Marriage</h2>
+            <div class="space-y-6">
+                <div class="card border-l-4 border-pink-500">
+                    <p class="card-header">February 2025 to October 2026</p>
+                    <p>Dating/courting Sharon Nyambura, we are in a relationship- with the intention of marrying.</p>
+                </div>
+                <div class="card border-l-4 border-pink-500">
+                    <p class="card-header">October 31st, 2026 to October 2027</p>
+                    <p>Engagement period with a marriage proposal to Sharon on October 31st, 2026.</p>
+                </div>
+                <div class="card border-l-4 border-pink-500">
+                    <p class="card-header"> (wedding) October 31st, 2027</p>
+                    <p> The wedding cost 70 million KES, followed by a 14 weeks, 60 million KES honeymoon across 12 countries in Europe,South America and Africa.</p>
+                </div>
+                <div class="card border-l-4 border-pink-500">
+                    <p class="card-header">Living Together</p>
+                    <p>Living with Sharon since March 2026 in Kentmare, Tigoni in the 5 bedroomed house.</p>
+                </div>
+                <div class="card border-l-4 border-pink-500">
+                    <p class="card-header">Qualities of Sharon</p>
+                    <p>Sharon is described as a kind, patient, gentle, and peaceful woman who loves me deeply, prays for me, takes care for me like a wife does and provides care and support.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container mb-12">
+            <h2 class="section-title text-4xl font-bold text-gray-800">Spiritual Life-JESUS CHRIST</h2>
+            <div class="space-y-6">
+                <div class="card spiritual-card">
+                    <p class="card-header">2025 - 2028</p>
+                    <p>Four years of continuous prayer with sharon since we started dating and full-time Bible study each year(365 days-Genesis to Revelation) with Sharon. We also pray separately for our own selves and for each other.</p>
+                </div>
+                <div class="card spiritual-card">
+                    <p class="card-header">Church</p>
+                    <p>Attending Ruach Church of Julian Kyula.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container mb-12">
+            <h2 class="section-title text-4xl font-bold text-gray-800">Education</h2>
+            <div class="space-y-6">
+                <div class="card education-card">
+                    <p class="card-header">Sharon Nyambura</p>
+                    <p>Computer Science degree from Strathmore.</p>
+                </div>
+                <div class="card education-card">
+                    <p class="card-header">Kamau Kabage</p>
+                    <p>Bachelor of Business Science in Financial Economics from Strathmore, since March 2026.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container mb-12">
+            <h2 class="section-title text-4xl font-bold text-gray-800">Home & Assets</h2>
+            <div class="space-y-6">
+                <div class="card home-card">
+                    <p class="card-header">Home</p>
+                    <p>A 5-bedroom home in Kentmare, Tigoni, with a yearly rent of 3,000,000 KES lived in since 2025.</p>
+                </div>
+                <div class="card home-card">
+                    <p class="card-header">My Car</p>
+                    <p>A Jeep Grand Cherokee, owned since 2025, bought at 10,000,000 KES.</p>
+                </div>
+                <div class="card home-card">
+                    <p class="card-header">Sharon's Car</p>
+                    <p>A Range Rover Vogue, owned since April 2026, bought at 20,000,000 KES.</p>
+                </div>
+                <div class="card home-card">
+                    <p class="card-header">Our Car</p>
+                    <p>A Lexus LX 600, owned since June 2027, bought at 25,000,000 KES.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-container">
+            <h2 class="section-title text-4xl font-bold text-gray-800">Business: Kamau Leather Enterprise</h2>
+            <h2 class="section-title text-4xl font-bold text-gray-800">A textile industry</h2>
+            <div class="space-y-6">
+                <div class="card business-card">
+                    <p class="card-header">Business Overview</p>
+                    <p>This is a textile enterprise, a significant segment of the textile industry, that processes animal hides into a durable material for various products. The process involves tanning to make the hide resistant to decay.</p>
+                </div>
+                <div class="card business-card">
+                    <p class="card-header">Financials</p>
+                    <ul class="list-disc ml-6">
+                        <li><strong>2025:</strong> 1 billion KES capital  1.32 billion KES net income</li>
+
+                        <li><strong>2026:</strong> 2 billion KES capital  2.12 billion KES net income</li>
+                        <li><strong>2027:</strong> 4 billion KES capital  3.74 billion KES net income</li>
+                        <li><strong>2028:</strong> 7 billion KES capital  5.64 billion KES net  income</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
