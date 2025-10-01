@@ -3,190 +3,1014 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Life Timeline</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Stephen Kabage Kamau - Africa's Greatest Talent</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background-color: #f8f9fa;
         }
+
         .container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background-color: #fff;
-            border-radius: 1rem;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
-        .section-title {
-            position: relative;
-            margin-bottom: 2rem;
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1a5f3f 0%, #2d8f5f 100%);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #e8f5e8 0%, #f0f8f0 100%);
+            padding: 4rem 0;
             text-align: center;
         }
-        .section-title::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            bottom: -10px;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background-color: #ff6347; /* Tomato */
-            border-radius: 2px;
+
+        .hero-badge {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a5f3f;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 2rem;
         }
-        .card {
-            background-color: #f7f9fc;
-            padding: 1.5rem;
-            border-radius: 0.75rem;
-            margin-bottom: 1.5rem;
-            border-left: 5px solid;
-            transition: transform 0.3s ease;
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #1a5f3f;
         }
-        .card:hover {
-            transform: translateY(-5px);
+
+        .hero h2 {
+            font-size: 2.5rem;
+            color: #2d8f5f;
+            margin-bottom: 1rem;
         }
-        .card-header {
-            font-weight: 700;
-            color: #1a237e; /* Indigo */
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            margin: 3rem 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stat {
+            text-align: center;
+        }
+
+        .hero-stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a5f3f;
+        }
+
+        .hero-stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .hero-description {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #1a5f3f;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2d8f5f;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #ffd700;
+            color: #1a5f3f;
+        }
+
+        .btn-secondary:hover {
+            background: #ffed4e;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #1a5f3f;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Career Overview */
+        .career-overview {
+            background: white;
+        }
+
+        .overview-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-card h3 {
+            color: #666;
+            font-size: 0.9rem;
             margin-bottom: 0.5rem;
         }
-        .spiritual-card {
-            border-color: #4caf50; /* Green */
+
+        .stat-card .number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a5f3f;
         }
-        .education-card {
-            border-color: #2196f3; /* Blue */
+
+        .goat-badge {
+            text-align: center;
+            margin-top: 2rem;
         }
-        .home-card {
-            border-color: #ff9800; /* Orange */
+
+        .goat-badge span {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a5f3f;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 1.1rem;
         }
-        .business-card {
-            border-color: #9c27b0; /* Purple */
+
+        /* Club Career */
+        .club-career {
+            background: #f8f9fa;
+        }
+
+        .club-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .club-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .club-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a5f3f;
+        }
+
+        .club-duration {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .club-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .club-stat {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .club-stat-number {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a5f3f;
+        }
+
+        .club-stat-label {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .trophies-section {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .trophies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .trophy-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .transfer-fee {
+            background: #e8f5e8;
+            padding: 1rem;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #1a5f3f;
+        }
+
+        /* National Team */
+        .national-team {
+            background: white;
+        }
+
+        .kenya-flag {
+            width: 60px;
+            height: 40px;
+            background: linear-gradient(to bottom, #000 33%, #dc143c 33%, #dc143c 66%, #228b22 66%);
+            margin: 0 auto 1rem;
+            border-radius: 5px;
+        }
+
+        .national-stats {
+            background: #fff5f5;
+            border: 1px solid #fecaca;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .national-stats h3 {
+            color: #dc2626;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .records-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .record-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 5px;
+        }
+
+        .honors-section {
+            margin-top: 2rem;
+        }
+
+        .honors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .honor-card {
+            background: #fffbeb;
+            border: 1px solid #fbbf24;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .honor-card h4 {
+            color: #92400e;
+            margin-bottom: 1rem;
+        }
+
+        .honor-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .world-cup-victories {
+            margin-top: 2rem;
+        }
+
+        .world-cup-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .world-cup-card {
+            background: #f0f9ff;
+            border: 1px solid #3b82f6;
+            border-radius: 10px;
+            padding: 1.5rem;
+        }
+
+        .world-cup-year {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .world-cup-final {
+            background: white;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+        }
+
+        .world-cup-score {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #1e40af;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
+        .skk-performance {
+            background: #ecfdf5;
+            border: 1px solid #10b981;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-top: 1rem;
+        }
+
+        .skk-performance h5 {
+            color: #047857;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
-<body class="bg-gray-100 min-h-screen p-4">
-    <div class="container">
-        <header class="text-center mb-10">
-            <h1 class="text-5xl font-extrabold text-blue-900 mb-2">Life Timeline</h1>
-            <p class="text-lg text-gray-600">A journey through My life.</p>
-            <p class="text-lg text-gray-600"> 2025, 2026, 2027, 2028</p>
-        </header>
+<body>
+     Header 
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    🇰🇪 Stephen Kabage Kamau
+                </div>
+                <nav class="nav">
+                    <a href="#career">Career</a>
+                    <a href="#clubs">Clubs</a>
+                    <a href="#national">National</a>
+                    <a href="#statistics">Statistics</a>
+                    <a href="#achievements">Achievements</a>
+                </nav>
+            </div>
+        </div>
+    </header>
 
-        <section class="section-container mb-12">
-            <h2 class="section-title text-4xl font-bold text-gray-800">Marriage</h2>
-            <div class="space-y-6">
-                <div class="card border-l-4 border-pink-500">
-                    <p class="card-header">February 2025 to October 2026</p>
-                    <p>Dating/courting Sharon Nyambura, we are in a relationship- with the intention of marrying.</p>
+     Hero Section 
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">⭐ Africa's Greatest Talent ⭐</div>
+            <h1>SKK</h1>
+            <h2>Stephen Kabage Kamau</h2>
+            <p class="hero-subtitle">Kenyan Footballer</p>
+            
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <div class="hero-stat-number">20</div>
+                    <div class="hero-stat-label">seasons</div>
                 </div>
-                <div class="card border-l-4 border-pink-500">
-                    <p class="card-header">October 31st, 2026 to October 2027</p>
-                    <p>Engagement period with a marriage proposal to Sharon on October 31st, 2026.</p>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">1000</div>
+                    <div class="hero-stat-label">career games</div>
                 </div>
-                <div class="card border-l-4 border-pink-500">
-                    <p class="card-header"> (wedding) October 31st, 2027</p>
-                    <p> The wedding cost 70 million KES, followed by a 14 weeks, 60 million KES honeymoon across 12 countries in Europe,South America and Africa.</p>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">736</div>
+                    <div class="hero-stat-label">career goals</div>
                 </div>
-                <div class="card border-l-4 border-pink-500">
-                    <p class="card-header">Living Together</p>
-                    <p>Living with Sharon since March 2026 in Kentmare, Tigoni in the 5 bedroomed house.</p>
-                </div>
-                <div class="card border-l-4 border-pink-500">
-                    <p class="card-header">Qualities of Sharon</p>
-                    <p>Sharon is described as a kind, patient, gentle, and peaceful woman who loves me deeply, prays for me, takes care for me like a wife does and provides care and support.</p>
+                <div class="hero-stat">
+                    <div class="hero-stat-number">876</div>
+                    <div class="hero-stat-label">career assists</div>
                 </div>
             </div>
-        </section>
 
-        <section class="section-container mb-12">
-            <h2 class="section-title text-4xl font-bold text-gray-800">Spiritual Life-JESUS CHRIST</h2>
-            <div class="space-y-6">
-                <div class="card spiritual-card">
-                    <p class="card-header">2025 - 2028</p>
-                    <p>Four years of continuous prayer with sharon since we started dating and full-time Bible study each year(365 days-Genesis to Revelation) with Sharon. We also pray separately for our own selves and for each other.</p>
+            <p class="hero-description">
+                The legendary Kenyan footballer who conquered Europe and led Kenya to three World Cup victories. 
+                Explore the incredible career of the greatest African player of all time.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary" onclick="openModal('careerModal')">📊 View Career Stats</a>
+                <a href="#" class="btn btn-secondary" onclick="openModal('achievementsModal')">🏆 See Achievements</a>
+            </div>
+        </div>
+    </section>
+
+     Career Overview 
+    <section id="career" class="section career-overview">
+        <div class="container">
+            <h2 class="section-title">Career Overview</h2>
+            <p class="section-subtitle">Two decades of excellence across Ajax Amsterdam, Arsenal, and the Kenyan National Team</p>
+            
+            <div class="overview-stats">
+                <div class="stat-card">
+                    <h3>Total Games</h3>
+                    <div class="number">1,000</div>
                 </div>
-                <div class="card spiritual-card">
-                    <p class="card-header">Church</p>
-                    <p>Attending Ruach Church of Julian Kyula.</p>
+                <div class="stat-card">
+                    <h3>Total Goals ⚽</h3>
+                    <div class="number">736</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Assists 👟</h3>
+                    <div class="number">876</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Trophies 🏆</h3>
+                    <div class="number">45</div>
                 </div>
             </div>
-        </section>
 
-        <section class="section-container mb-12">
-            <h2 class="section-title text-4xl font-bold text-gray-800">Education</h2>
-            <div class="space-y-6">
-                <div class="card education-card">
-                    <p class="card-header">Sharon Nyambura</p>
-                    <p>Computer Science degree from Strathmore.</p>
+            <div class="goat-badge">
+                <span>🐐 G.O.A.T - Greatest Of All Time</span>
+            </div>
+        </div>
+    </section>
+
+     Club Career 
+    <section id="clubs" class="section club-career">
+        <div class="container">
+            <h2 class="section-title">Club Career</h2>
+            <p class="section-subtitle">From Ajax Amsterdam to Arsenal - A journey of excellence</p>
+
+             Ajax Amsterdam 
+            <div class="club-card">
+                <div class="club-header">
+                    <div>
+                        <h3 class="club-name">Ajax Amsterdam</h3>
+                        <p class="club-duration">Coach: José Mourinho</p>
+                    </div>
+                    <div class="club-duration">4 Seasons</div>
                 </div>
-                <div class="card education-card">
-                    <p class="card-header">Kamau Kabage</p>
-                    <p>Bachelor of Business Science in Financial Economics from Strathmore, since March 2026.</p>
+                
+                <div class="club-stats">
+                    <div class="club-stat">
+                        <div class="club-stat-number">153</div>
+                        <div class="club-stat-label">Games</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">85</div>
+                        <div class="club-stat-label">Goals ⚽</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">127</div>
+                        <div class="club-stat-label">Assists 👟</div>
+                    </div>
+                </div>
+
+                <div class="trophies-section">
+                    <h4>Trophies Won:</h4>
+                    <div class="trophies-grid">
+                        <div class="trophy-item">
+                            <span>UEFA Europa League</span>
+                            <span>🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>2x Eredivisie Title</span>
+                            <span>🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>KNVB Cup</span>
+                            <span>🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>Johan Cruyff Shield</span>
+                            <span>🏆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="transfer-fee">
+                    Transfer fee to Arsenal: €175 million
                 </div>
             </div>
-        </section>
 
-        <section class="section-container mb-12">
-            <h2 class="section-title text-4xl font-bold text-gray-800">Authorship</h2>
-            <div class="space-y-6">
-                <div class="card home-card">
-                    <p class="card-header">The Devil is a genius -BEWARE</p>
-                    <p> (10,000,000 physical copies sold)- 428 pages – 10 dollars each -August 2026 released .</p>
+             Arsenal 
+            <div class="club-card">
+                <div class="club-header">
+                    <div>
+                        <h3 class="club-name">Arsenal</h3>
+                        <p class="club-duration">The Legendary Years</p>
+                    </div>
+                    <div class="club-duration">16 Seasons</div>
                 </div>
-                <div class="card home-card">
-                    <p class="card-header">The Devil is a liar - BEWARE</p>
-                    <p>(7,000,000 physical copies sold)- 213 pages – 10 dollars each -July 2026 released </p>
+                
+                <div class="club-stats">
+                    <div class="club-stat">
+                        <div class="club-stat-number">671</div>
+                        <div class="club-stat-label">Games</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">517</div>
+                        <div class="club-stat-label">Goals ⚽</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">608</div>
+                        <div class="club-stat-label">Assists 👟</div>
+                    </div>
                 </div>
-                <div class="card home-card">
-                    <p class="card-header">JESUS CHRIST</p>
-                    <p>(5,000,000 physical copies sold)- 271 pages – 10 dollars each - novembor 2026 released</p>
-                </div> 
-        </section>
 
-        <section class="section-container mb-12">
-            <h2 class="section-title text-4xl font-bold text-gray-800">Home & Assets</h2>
-            <div class="space-y-6">
-                <div class="card home-card">
-                    <p class="card-header">Home</p>
-                    <p>A 5-bedroom home in Kentmare, Tigoni, with a yearly rent of 3,000,000 KES lived in since 2025.</p>
+                <div class="club-stats">
+                    <div class="club-stat">
+                        <div class="club-stat-number">32</div>
+                        <div class="club-stat-label">Trophies 🏆</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">7</div>
+                        <div class="club-stat-label">Ballon d'Or 🥇</div>
+                    </div>
                 </div>
-                <div class="card home-card">
-                    <p class="card-header">My Car</p>
-                    <p>A Jeep Grand Cherokee, owned since 2025, bought at 10,000,000 KES.</p>
-                </div>
-                <div class="card home-card">
-                    <p class="card-header">Sharon's Car</p>
-                    <p>A Range Rover Vogue, owned since April 2026, bought at 20,000,000 KES.</p>
-                </div>
-                <div class="card home-card">
-                    <p class="card-header">Our Car</p>
-                    <p>A Lexus LX 600, owned since June 2027, bought at 25,000,000 KES.</p>
+
+                <div class="trophies-section">
+                    <h4>Major Trophies:</h4>
+                    <div class="trophies-grid">
+                        <div class="trophy-item">
+                            <span>7x Premier League</span>
+                            <span>🏆🏆🏆🏆🏆🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>5x Champions League</span>
+                            <span>🏆🏆🏆🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>5x FA Cups</span>
+                            <span>🏆🏆🏆🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>4x Carabao Cups</span>
+                            <span>🏆🏆🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>5x Community Shields</span>
+                            <span>🏆🏆🏆🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>4x UEFA Super Cups</span>
+                            <span>🏆🏆🏆🏆</span>
+                        </div>
+                        <div class="trophy-item">
+                            <span>2x FIFA Club World Cups</span>
+                            <span>🏆🏆</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="section-container">
-            <h2 class="section-title text-4xl font-bold text-gray-800">Business: Kamau Leather Enterprise</h2>
-            <h2 class="section-title text-4xl font-bold text-gray-800">A textile industry</h2>
-            <div class="space-y-6">
-                <div class="card business-card">
-                    <p class="card-header">Business Overview</p>
-                    <p>This is a textile enterprise, a significant segment of the textile industry, that processes animal hides into a durable material for various products. The process involves tanning to make the hide resistant to decay.</p>
+     Kenya National Team 
+    <section id="national" class="section national-team">
+        <div class="container">
+            <h2 class="section-title">Kenya National Team</h2>
+            <p class="section-subtitle">Leading Kenya to unprecedented glory on the world stage</p>
+
+            <div class="kenya-flag"></div>
+
+            <div class="national-stats">
+                <h3>🇰🇪 Kenya Statistics</h3>
+                <div class="club-stats">
+                    <div class="club-stat">
+                        <div class="club-stat-number">176</div>
+                        <div class="club-stat-label">Games Played</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">134</div>
+                        <div class="club-stat-label">Goals Scored ⚽</div>
+                    </div>
+                    <div class="club-stat">
+                        <div class="club-stat-number">141</div>
+                        <div class="club-stat-label">Assists Made 👟</div>
+                    </div>
                 </div>
-                <div class="card business-card">
-                    <p class="card-header">Financials</p>
-                    <ul class="list-disc ml-6">
-                        <li><strong>2025:</strong> 1 billion KES capital  1.32 billion KES net income</li>
 
-                        <li><strong>2026:</strong> 2 billion KES capital  2.12 billion KES net income</li>
-                        <li><strong>2027:</strong> 4 billion KES capital  3.74 billion KES net income</li>
-                        <li><strong>2028:</strong> 7 billion KES capital  5.64 billion KES net  income</li>
-                    </ul>
+                <div class="records-grid">
+                    <div class="record-item">
+                        <span>AFCON All-Time Top Scorer:</span>
+                        <strong>41 goals</strong>
+                    </div>
+                    <div class="record-item">
+                        <span>AFCON All-Time Top Assister:</span>
+                        <strong>46 assists</strong>
+                    </div>
+                    <div class="record-item">
+                        <span>World Cup All-Time Top Scorer:</span>
+                        <strong>37 goals</strong>
+                    </div>
+                    <div class="record-item">
+                        <span>World Cup All-Time Top Assister:</span>
+                        <strong>38 assists</strong>
+                    </div>
                 </div>
             </div>
-        </section>
+
+            <div class="honors-section">
+                <h3>🏅 Major Honors</h3>
+                <div class="honors-grid">
+                    <div class="honor-card">
+                        <h4>🏆 AFCON Titles</h4>
+                        <div class="honor-number">5</div>
+                        <p>2027, 2029, 2033, 2035, 2037</p>
+                    </div>
+                    <div class="honor-card">
+                        <h4>🥇 Olympics</h4>
+                        <div class="honor-number">1</div>
+                        <p>2028 Gold Medal</p>
+                    </div>
+                    <div class="honor-card">
+                        <h4>🏆 CAF African Player of the Year</h4>
+                        <div class="honor-number">11</div>
+                        <p>Record-breaking wins</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="world-cup-victories">
+                <h3>🏆 FIFA World Cup Victories</h3>
+                <div class="world-cup-grid">
+                    <div class="world-cup-card">
+                        <div class="world-cup-year">2030 World Cup</div>
+                        <div class="world-cup-final">
+                            <strong>Final match - Kenya vs Brazil</strong>
+                            <div class="world-cup-score">5 - 4</div>
+                            <p><em>FULLTIME</em></p>
+                            Scored a wonderful/marvelous hat-trick and assisted 2 goals
+                        </div>
+
+                        
+                            world cup goals and assists
+                        <div class="skk-performance">
+                            <h5>SKK Performance</h5>                    
+                            <div class="club-stats">
+                                <div class="club-stat">
+                                    <div class="club-stat-number">11</div>
+                                    <div class="club-stat-label">Goals</div>
+                                </div>
+                                <div class="club-stat">
+                                    <div class="club-stat-number">15</div>
+                                    <div class="club-stat-label">Assists</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="world-cup-card">
+                        <div class="world-cup-year">2034 World Cup</div>
+                        <div class="world-cup-final">
+                            <strong>Final match - Kenya vs USA</strong>
+                            <div class="world-cup-score">4 - 3</div>
+                            <p><em>EXTRA TIME - NO PENALTIES</em></p>
+                            Scored ALL goals for Kenya in this final, no penalty taken. Scored two free-kicks
+                        </div>
+
+
+                            world cup goals and assists
+                        <div class="skk-performance">
+                            <h5>SKK Performance</h5>
+                            <div class="club-stats">
+                                <div class="club-stat">
+                                    <div class="club-stat-number">14</div>
+                                    <div class="club-stat-label">Goals</div>
+                                </div>
+                                <div class="club-stat">
+                                    <div class="club-stat-number">13</div>
+                                    <div class="club-stat-label">Assists</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="world-cup-card">
+                        <div class="world-cup-year">2038 World Cup</div>
+                        <div class="world-cup-final">
+                            <strong>Final match - Kenya vs England</strong>
+                            <div class="world-cup-score">3 - 1</div>
+                            <p><em>FULLTIME</em></p>
+                            Scored 2 goals in this final
+                        </div>
+
+                            world cup goals and assists
+                        <div class="skk-performance">
+                            <h5>SKK Performance</h5>                           
+                            <div class="club-stats">
+                                <div class="club-stat">
+                                    <div class="club-stat-number">12</div>
+                                    <div class="club-stat-label">Goals</div>
+                                </div>
+                                <div class="club-stat">
+                                    <div class="club-stat-number">10</div>
+                                    <div class="club-stat-label">Assists</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     Modals 
+    <div id="careerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('careerModal')">&times;</span>
+            <h2>📊 Detailed Career Statistics</h2>
+            
+            <h3>Goals Breakdown - 517 Arsenal Goals</h3>
+            <div class="records-grid">
+                <div class="record-item">
+                    <span>Premier League Goals:</span>
+                    <strong>325 ⚽</strong>
+                </div>
+                <div class="record-item">
+                    <span>UEFA Champions League:</span>
+                    <strong>103 ⚽</strong>
+                </div>
+                <div class="record-item">
+                    <span>Domestic Cup Competitions:</span>
+                    <strong>66 ⚽</strong>
+                </div>
+                <div class="record-item">
+                    <span>Pre-season & Friendlies:</span>
+                    <strong>13 ⚽</strong>
+                </div>
+                <div class="record-item">
+                    <span>International Competitions:</span>
+                    <strong>10 ⚽</strong>
+                </div>
+            </div>
+
+            <h3>Premier League Golden Boots (7 Total)</h3>
+            
+
+            <h3>European Golden Boots: 5 Total 🥇🥇🥇🥇🥇</h3>
+
+            <h3>Assists Breakdown - 608 Arsenal Assists</h3>
+            <div class="records-grid">
+                <div class="record-item">
+                    <span>Premier League Assists:</span>
+                    <strong>401 👟</strong>
+                </div>
+                <div class="record-item">
+                    <span>UEFA Champions League:</span>
+                    <strong>101 👟</strong>
+                </div>
+                <div class="record-item">
+                    <span>Domestic Cup Competitions:</span>
+                    <strong>60 👟</strong>
+                </div>
+                <div class="record-item">
+                    <span>Pre-season & Friendlies:</span>
+                    <strong>16 👟</strong>
+                </div>
+                <div class="record-item">
+                    <span>International Assists:</span>
+                    <strong>20 👟</strong>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="achievementsModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('achievementsModal')">&times;</span>
+            <h2>🏆 Complete Achievement Collection</h2>
+            
+            <h3>Arsenal Trophies - 32 Total</h3>
+            <div class="trophies-grid">
+                <div class="trophy-item"><span>Premier League Titles:</span><span>7 🏆</span></div>
+                <div class="trophy-item"><span>UEFA Champions League:</span><span>5 🏆</span></div>
+                <div class="trophy-item"><span>FA Cups:</span><span>5 🏆</span></div>
+                <div class="trophy-item"><span>Carabao Cups:</span><span>4 🏆</span></div>
+                <div class="trophy-item"><span>Community Shields:</span><span>5 🏆</span></div>
+                <div class="trophy-item"><span>UEFA Super Cups:</span><span>4 🏆</span></div>
+                <div class="trophy-item"><span>FIFA Club World Cups:</span><span>2 🏆</span></div>
+            </div>
+
+            <h3>Ballon d'Or Awards - 7 Total 🥇</h3>
+            <p>Individual Ballon d'Or Wins: 1st, 2nd, 3rd, 4th, 5th, 6th, 7th</p>
+
+            <h3>Kenya National Team Major Honours</h3>
+            <div class="trophies-grid">
+                <div class="trophy-item"><span>Olympic Gold Medal:</span><span>1 🥇</span></div>
+                <div class="trophy-item"><span>AFCON Titles:</span><span>5 🏆</span></div>
+                <div class="trophy-item"><span>World Cup Winners:</span><span>3 🏆</span></div>
+                <div class="trophy-item"><span>CAF African Player of the Year:</span><span>11 🏆</span></div>
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem; padding: 2rem; background: linear-gradient(135deg, #ffd700, #ffed4e); border-radius: 10px;">
+                <h3 style="color: #1a5f3f; margin-bottom: 1rem;">👑 JESUS CHRIST</h3>
+                <p style="color: #1a5f3f; font-weight: bold;">
+                    The undisputed Greatest Of All Time (G.O.A.T) - Stephen Kabage Kamau's legacy transcends football,
+                    inspiring generations across Africa and the world.He is a firm and stout believer of Jesus Christ and his apostle.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
